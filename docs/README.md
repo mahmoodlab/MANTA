@@ -113,7 +113,7 @@ To following command can be used to train the multi-task model, with all stain t
 CUDA_VISIBLE_DEVICES=0 python main.py --mtl --drop_out --early_stopping --lr 2e-4 --k 1 --label_frac 1 --exp_code kidney_output --bag_loss ce --inst_loss svm --task kidney-mtl --model_type attention_mil --data_root_dir DATA_ROOT_DIR  --subtyping --log_data --patient_level 
 
 ```
-To utilize fusion with each stain type having its own featre encoder you can use the flag --fusion and specify either 'concat', 'tensor' or 'hierarchical_t'
+To utilize fusion with each stain type having its own feature encoder you can use the flag --fusion and specify either 'concat', 'tensor' or 'hierarchical_t'
 ``` shell
 CUDA_VISIBLE_DEVICES=0 python main.py --mtl --drop_out --early_stopping --lr 2e-4 --k 1 --label_frac 1 --exp_code kidney_output --bag_loss ce --inst_loss svm --task kidney_mtl --model_type attention_mil --data_root_dir DATA_ROOT_DIR  --subtyping --log_data --patient_level --stain_level --fusion hierarchical_t
 ```

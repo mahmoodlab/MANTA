@@ -131,7 +131,7 @@ def summary(model, loader, args):
         A_patient = model_results_dict['A']
         del model_results_dict
 
-        if (case_id in ['BS-20-G09319', 'BS-15-R02658']) or (bag_size > 40_000):
+        if (bag_size > 40_000):
             print(f'Skipping {case_id}:\tBag Size: {bag_size}')
             continue
 
